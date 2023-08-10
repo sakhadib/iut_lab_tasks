@@ -1,0 +1,8 @@
+D:\IUT Documents\Academic Docs\L_1 - T_2\OOP\lab\lab_8\bin\Debug\lab_8.exe.config
+D:\IUT Documents\Academic Docs\L_1 - T_2\OOP\lab\lab_8\bin\Debug\lab_8.exe
+D:\IUT Documents\Academic Docs\L_1 - T_2\OOP\lab\lab_8\bin\Debug\lab_8.pdb
+D:\IUT Documents\Academic Docs\L_1 - T_2\OOP\lab\lab_8\obj\Debug\lab_8.csproj.AssemblyReference.cache
+D:\IUT Documents\Academic Docs\L_1 - T_2\OOP\lab\lab_8\obj\Debug\lab_8.csproj.SuggestedBindingRedirects.cache
+D:\IUT Documents\Academic Docs\L_1 - T_2\OOP\lab\lab_8\obj\Debug\lab_8.csproj.CoreCompileInputs.cache
+D:\IUT Documents\Academic Docs\L_1 - T_2\OOP\lab\lab_8\obj\Debug\lab_8.exe
+D:\IUT Documents\Academic Docs\L_1 - T_2\OOP\lab\lab_8\obj\Debug\lab_8.pdb

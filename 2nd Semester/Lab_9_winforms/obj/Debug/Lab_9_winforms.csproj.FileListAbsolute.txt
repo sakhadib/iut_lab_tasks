@@ -1,0 +1,13 @@
+D:\OOP_Labs\Lab_9_winforms\bin\Debug\Lab_9_winforms.exe.config
+D:\OOP_Labs\Lab_9_winforms\bin\Debug\Lab_9_winforms.exe
+D:\OOP_Labs\Lab_9_winforms\bin\Debug\Lab_9_winforms.pdb
+D:\OOP_Labs\Lab_9_winforms\obj\Debug\Lab_9_winforms.csproj.AssemblyReference.cache
+D:\OOP_Labs\Lab_9_winforms\obj\Debug\Lab_9_winforms.csproj.SuggestedBindingRedirects.cache
+D:\OOP_Labs\Lab_9_winforms\obj\Debug\Lab_9_winforms.DashBoard_form.resources
+D:\OOP_Labs\Lab_9_winforms\obj\Debug\Lab_9_winforms.Form1.resources
+D:\OOP_Labs\Lab_9_winforms\obj\Debug\Lab_9_winforms.Login_form.resources
+D:\OOP_Labs\Lab_9_winforms\obj\Debug\Lab_9_winforms.Properties.Resources.resources
+D:\OOP_Labs\Lab_9_winforms\obj\Debug\Lab_9_winforms.csproj.GenerateResource.cache
+D:\OOP_Labs\Lab_9_winforms\obj\Debug\Lab_9_winforms.csproj.CoreCompileInputs.cache
+D:\OOP_Labs\Lab_9_winforms\obj\Debug\Lab_9_winforms.exe
+D:\OOP_Labs\Lab_9_winforms\obj\Debug\Lab_9_winforms.pdb
