@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Lab_2._3_ID_210042106
 {
-    internal interface ticket
+    internal class bookManager
     {
-        bool bookTicket(passenger passenger);
+        public static void bookTicket(ticket ticket, passenger passenger)
+        {
+            ticket.bookTicket(passenger);
+        }
     }
 }

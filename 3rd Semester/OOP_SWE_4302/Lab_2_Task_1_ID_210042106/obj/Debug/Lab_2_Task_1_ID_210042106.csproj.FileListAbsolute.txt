@@ -1,0 +1,8 @@
+F:\iut-lab\3rd Semester\OOP_SWE_4302\Lab_2_Task_1_ID_210042106\bin\Debug\Lab_2_Task_1_ID_210042106.exe.config
+F:\iut-lab\3rd Semester\OOP_SWE_4302\Lab_2_Task_1_ID_210042106\bin\Debug\Lab_2_Task_1_ID_210042106.exe
+F:\iut-lab\3rd Semester\OOP_SWE_4302\Lab_2_Task_1_ID_210042106\bin\Debug\Lab_2_Task_1_ID_210042106.pdb
+F:\iut-lab\3rd Semester\OOP_SWE_4302\Lab_2_Task_1_ID_210042106\obj\Debug\Lab_2_Task_1_ID_210042106.csproj.AssemblyReference.cache
+F:\iut-lab\3rd Semester\OOP_SWE_4302\Lab_2_Task_1_ID_210042106\obj\Debug\Lab_2_Task_1_ID_210042106.csproj.SuggestedBindingRedirects.cache
+F:\iut-lab\3rd Semester\OOP_SWE_4302\Lab_2_Task_1_ID_210042106\obj\Debug\Lab_2_Task_1_ID_210042106.csproj.CoreCompileInputs.cache
+F:\iut-lab\3rd Semester\OOP_SWE_4302\Lab_2_Task_1_ID_210042106\obj\Debug\Lab_2_Task_1_ID_210042106.exe
+F:\iut-lab\3rd Semester\OOP_SWE_4302\Lab_2_Task_1_ID_210042106\obj\Debug\Lab_2_Task_1_ID_210042106.pdb
