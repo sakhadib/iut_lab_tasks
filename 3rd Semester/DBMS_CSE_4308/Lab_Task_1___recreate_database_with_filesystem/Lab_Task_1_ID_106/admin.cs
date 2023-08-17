@@ -20,17 +20,17 @@ namespace Lab_Task_1_ID_106
             try
             {
                 StreamReader studentRead = new StreamReader(student_path);
-                string stu = studentRead.ReadLine();
-                while(stu != null)
+                string stu = studentRead.ReadLine(); //824757;Charlie;18;A+;CSE
+                while (stu != null)
                 {
-                    string[] studentFrag = stu.Split(';');
+                    string[] studentFrag = stu.Split(';');  // 824757   Charlie     18      A+      CSE
 
                     //now extracting values for students
                     int id = Convert.ToInt32(studentFrag[0]);
                     string name = Convert.ToString(studentFrag[1]);
                     int age = Convert.ToInt32(studentFrag[2]);
                     string blood_grp = Convert.ToString(studentFrag[3]);
-                    string dept = Convert.ToString(studentFrag[4]);
+                    string dept = studentFrag[4];
 
                     // Create a student object
                     student student = new student(id, name, age, blood_grp, dept);
@@ -71,6 +71,7 @@ namespace Lab_Task_1_ID_106
                         if(s.id == id)
                         {
                             s.add_grade(g);
+                            break;
                         }
                     }
                     grade = gradeRead.ReadLine();
@@ -141,6 +142,7 @@ namespace Lab_Task_1_ID_106
                 sw.Close();
                 Console.WriteLine("Grade Added Successfully");
             }
+            
         }
 
         public bool exist(int id)

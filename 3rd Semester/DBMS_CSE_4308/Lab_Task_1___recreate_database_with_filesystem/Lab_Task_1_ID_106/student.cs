@@ -43,13 +43,11 @@ namespace Lab_Task_1_ID_106
 
         public grades low_gpa()
         {
-            double l_gpa = 10;
-            grades gg = new grades();
+            grades gg = new grades(210042, 10, 0);
             foreach(grades g in _grades)
             {
-                if(g.gpa < l_gpa)
+                if(g.gpa < gg.gpa)
                 {
-                    l_gpa = g.gpa;
                     gg = g;
                 }
             }
