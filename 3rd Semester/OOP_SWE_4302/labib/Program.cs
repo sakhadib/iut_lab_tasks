@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab_2_Task_1_ID_210042106
+namespace labib
 {
-    internal interface printer
+    internal class Program
     {
-        void print(page page, bool bothside);
+        static void Main(string[] args)
+        {
+        }
     }
 }

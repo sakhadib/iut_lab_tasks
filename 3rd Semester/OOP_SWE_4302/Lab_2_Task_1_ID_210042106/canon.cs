@@ -10,20 +10,56 @@ namespace Lab_2_Task_1_ID_210042106
     {
 
         public string printername;
+        public string color;
+        bool colormode;
 
         public canon(string printername)
         {
             this.printername = printername;
+            this.color = "Colorful";
+            this.colormode = false;
         }
 
-        public void print(page page, colorMode color)
+        public canon(string printername, bool colormode)
         {
-            Console.WriteLine("Printing " + page.get_page() + " in " + color.get_color() + " by " + this.printername);
+            this.printername = printername;
+            this.color = "Colorful";
+            this.colormode = colormode;
         }
 
-        public void print(page page)
+        public void print(page page, bool bothside)
         {
-            Console.WriteLine("Printing " + page.get_page() + " in Colorful" + " by " + this.printername);
+
+            if (bothside)
+            {
+                if (colormode)
+                {
+                    this.color = "color";
+                    Console.WriteLine($"Printing Bothside {this.color} page in " + this.printername);
+                }
+                else
+                {
+                    this.color = "black and white";
+                    Console.WriteLine($"printing Bothside {this.color} in " + this.printername);
+                }
+            }
+            else
+            {
+                if (colormode)
+                {
+                    this.color = "color";
+                    Console.WriteLine($"Printing SingleSide {this.color} page in " + this.printername);
+                }
+                else
+                {
+                    this.color = "color";
+                    Console.WriteLine($"printing SingleSide {this.color} page in " + this.printername);
+                }
+            }
+
+
         }
+
+
     }
 }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3C6E754C-D5D9-4D00-8541-93C429F96301}</ProjectGuid>
+    <ProjectGuid>{365D785F-AF0E-4B2A-A63E-7B9EC199A6BD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lab_2_Task_1_ID_210042106</RootNamespace>
-    <AssemblyName>Lab_2_Task_1_ID_210042106</AssemblyName>
+    <RootNamespace>labib</RootNamespace>
+    <AssemblyName>labib</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="canon.cs" />
-    <Compile Include="epson.cs" />
-    <Compile Include="page.cs" />
-    <Compile Include="printer.cs" />
-    <Compile Include="printJob.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

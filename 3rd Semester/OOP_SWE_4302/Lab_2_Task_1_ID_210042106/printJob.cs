@@ -8,14 +8,9 @@ namespace Lab_2_Task_1_ID_210042106
 {
     internal class printJob
     {
-        public static void print(printer p, page page, colorMode c)
+        public static void print(printer p, page page, bool bothside)
         {
-            p.print(page, c);
-        }
-
-        public static void print(printer p, page page)
-        {
-            p.print(page);
+            p.print(page, bothside);
         }
     }
 }
