@@ -2,6 +2,7 @@ public class drivable implements Ivehicle, Ifuel
 {
     String name;
     String fuel_type;
+    fuel f = fuel.diesel;
     boolean started = false;
 
     public drivable(String name, String fuel_type){
@@ -29,7 +30,13 @@ public class drivable implements Ivehicle, Ifuel
 
     }
 
+    public void accelarate_engine(){
+        System.out.println(this.name + " is getting Accelerated");
+    }
+
     public String get_fuel_type() {
         return this.name + " uses " + fuel_type;
     }
+
+
 }
