@@ -5,9 +5,10 @@
 
 using namespace std;
 
+
 int main() {
 
-    int arr[] = {1, 2, 3, 5, 5, 7, 8, 8};
+    int arr[] = {8, 7, 2, 5, 3, 1};
     int size = sizeof(arr) / sizeof(arr[0]);
     int target = 10;
     int count = 0;
@@ -17,21 +18,27 @@ int main() {
         cout << arr[i] << " ";
     }
 
-    int arr2[100000] = {0};
+    int arr2[20] = {0};
     for(int i=0; i<size; i++){
         arr2[arr[i]]++;
     }
 
-    for(int i=0; i<100000; i++){
-        int go = target - i;
-        if(arr2[go] > 0){
-            count++;
-            cout << "\n" << i << " + " << go << " = " << target << endl;
-            arr2[go]--;
+    for(int i = 0; i<20; i++){
+        if(target > i){
+            int q = target - i;
+            if(arr2[q] > 0 && q > i){
+                count++;
+                cout << "\nPair: " << q << " " << i << endl;
+            }
         }
     }
 
-    cout << "\nTotal pairs: " << count << endl;
+    if(count == 0){
+        cout << "\nNo pair found!" << endl;
+    }
+    else{
+        cout << "\nTotal pairs: " << count << endl;
+    }
 
     return 0;
 }
