@@ -76,7 +76,12 @@ void update_node(int key, int v){
 void remove_node(int key){
     bool is_found = false;
     Node *temp = head;
-    while(temp != NULL){  
+    if(head->data == key){
+        head = head->next;
+        is_found = true;
+    }
+    else{
+        while(temp->next != NULL){  
         if(temp->next->data == key){ 
             Node *temp2 = temp->next->next;
             temp->next = temp2;
@@ -85,6 +90,8 @@ void remove_node(int key){
         }
         temp = temp->next; 
     }
+    }
+    
 
     if(is_found == false){
         cout << "Node not found" << endl;
