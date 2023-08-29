@@ -2,126 +2,126 @@
 #include<stdlib.h>
 using namespace std;
 
-class Node{
+class node{
     public:
         int data;
-        Node *next;
+        node *my_next_node;
     
-        Node(int data){
+        node(int data){
             this->data = data;
-            this->next = NULL;
+            this->my_next_node = NULL;
         }
 };
 
-Node *n1 = new Node(1);
-Node *head = n1;
+node *n1 = new node(1);
+node *head = n1;
 
 void insert_front(int key){
-    Node *current = new Node(key); 
-    current->next = head; 
+    node *current = new node(key); 
+    current->my_next_node = head; 
     head = current;  
 }
 
 void insert_back(int key){
-    Node *current = new Node(key);
-    current->next = NULL;
-    Node *temp = head;
-    while(temp != NULL){  
-        if(temp->next == NULL){ 
-            temp->next = current; 
+    node *current = new node(key);
+    current->my_next_node = NULL;
+    node *my_temporary_node = head;
+    while(my_temporary_node != NULL){  
+        if(my_temporary_node->my_next_node == NULL){ 
+            my_temporary_node->my_next_node = current; 
             break; 
         }
-        temp = temp->next; 
+        my_temporary_node = my_temporary_node->my_next_node; 
     }
 }
 
 void Insert_after_node(int key, int v){
     bool is_found = false;
-    Node *current = new Node(key);
-    Node *temp = head;
-    while(temp != NULL){  
-        if(temp->data == v){ 
-            Node *temp2 = temp->next; 
-            temp->next = current; 
-            current->next = temp2; 
+    node *current = new node(key);
+    node *my_temporary_node = head;
+    while(my_temporary_node != NULL){  
+        if(my_temporary_node->data == v){ 
+            node *temp2 = my_temporary_node->my_next_node; 
+            my_temporary_node->my_next_node = current; 
+            current->my_next_node = temp2; 
             is_found = true;
             break;
         }
-        temp = temp->next; 
+        my_temporary_node = my_temporary_node->my_next_node; 
     }
 
     if(is_found == false){
-        cout << "Node not found" << endl;
+        cout << "node not found" << endl;
     }
 }
 
 
 void update_node(int key, int v){
     bool is_found = false;
-    Node *temp = head;
-    while(temp != NULL){  
-        if(temp->data == v){ 
-            temp->data = key;
+    node *my_temporary_node = head;
+    while(my_temporary_node != NULL){  
+        if(my_temporary_node->data == v){ 
+            my_temporary_node->data = key;
             is_found = true;
             break;
         }
-        temp = temp->next; 
+        my_temporary_node = my_temporary_node->my_next_node; 
     }
 
     if(is_found == false){
-        cout << "Node not found" << endl;
+        cout << "node not found" << endl;
     }
 }
 
 void remove_node(int key){
     bool is_found = false;
-    Node *temp = head;
+    node *my_temporary_node = head;
     if(head->data == key){
-        head = head->next;
+        head = head->my_next_node;
         is_found = true;
     }
     else{
-        while(temp->next != NULL){  
-        if(temp->next->data == key){ 
-            Node *temp2 = temp->next->next;
-            temp->next = temp2;
+        while(my_temporary_node->my_next_node != NULL){  
+        if(my_temporary_node->my_next_node->data == key){ 
+            node *temp2 = my_temporary_node->my_next_node->my_next_node;
+            my_temporary_node->my_next_node = temp2;
             is_found = true;
             break;
         }
-        temp = temp->next; 
+        my_temporary_node = my_temporary_node->my_next_node; 
     }
     }
     
 
     if(is_found == false){
-        cout << "Node not found" << endl;
+        cout << "node not found" << endl;
     }
 }
 
 void remove_head(){
-    Node *temp = head->next;  //head er porer address ta store kore nilam
-    head = temp;  // ebar oi next ta ke head e rakhtesi
+    node *my_temporary_node = head->my_next_node;  //head er porer address ta store kore nilam
+    head = my_temporary_node;  // ebar oi my_next_node ta ke head e rakhtesi
 }
 
 void remove_end(){
-    Node *temp = head;
-    Node *temp2;
-    while(temp != NULL){ 
-        if(temp->next->next == NULL){
-            temp2 = temp;
+    node *my_temporary_node = head;
+    node *temp2;
+    while(my_temporary_node != NULL){ 
+        if(my_temporary_node->my_next_node->my_next_node == NULL){
+            temp2 = my_temporary_node;
             break;
         }
-        temp = temp->next; 
+        my_temporary_node = my_temporary_node->my_next_node; 
     }
-    temp2->next = NULL;
+    temp2->my_next_node = NULL;
 }
 
 
 void print(){
-    Node *temp = head;
-    while(temp != NULL){ 
-        cout << temp->data << " "; 
-        temp = temp->next; 
+    node *my_temporary_node = head;
+    while(my_temporary_node != NULL){ 
+        cout << my_temporary_node->data << " "; 
+        my_temporary_node = my_temporary_node->my_next_node; 
     }
     cout << endl;
 }
@@ -129,19 +129,19 @@ void print(){
 
 int main(){
             
-    insert_front(3);
-    insert_back(5);
+    insert_front(20);
+    insert_back(64);
     
     while(true){
         cout << "Please input a number_____  ";
-        int command;
-        cin >> command;
+        int bash;
+        cin >> bash;
 
-        if(command == 8){
+        if(bash == 8){
             break;
         }
 
-        else if(command == 1){
+        else if(bash == 1){
             //insert at front
             int key;
             cin >> key;
@@ -149,7 +149,7 @@ int main(){
             print();
         }
 
-        else if(command == 2){
+        else if(bash == 2){
             //insert at back
             int key;
             cin >> key;
@@ -157,39 +157,39 @@ int main(){
             print();
         }
 
-        else if(command == 3){
+        else if(bash == 3){
             int key, v;
             cin >> key >> v;
             Insert_after_node(key, v);
             print();
         }
 
-        else if(command == 4){
+        else if(bash == 4){
             int key, v;
             cin >> key >> v;
             update_node(key, v);
             print();
         }
 
-        else if(command == 5){
+        else if(bash == 5){
             remove_head();
             print();
         }
 
-        else if(command == 6){
+        else if(bash == 6){
             int key;
             cin >> key;
             remove_node(key);
             print();
         }
 
-        else if(command == 7){
+        else if(bash == 7){
             remove_end();
             print();
         }
 
 
-        else if(command == 0){
+        else if(bash == 0){
             print(); 
         }
 

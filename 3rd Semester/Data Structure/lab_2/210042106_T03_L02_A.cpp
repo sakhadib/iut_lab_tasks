@@ -1,17 +1,19 @@
 #include <iostream>
-#include <random>
-#include<time.h>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
-struct ListNode
+class ListNode
 {
+public:
     int val;
     ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode() : val(0), next(NULL) {}
+    ListNode(int x) : val(x), next(NULL) {}
 };
 
-ListNode *middleNode = nullptr;
+ListNode *middleNode = NULL;
+
 ListNode *generator()
 {
     srand(time(NULL));
@@ -35,19 +37,19 @@ ListNode *generator()
 
 ListNode *findMiddleNode(ListNode *head)
 {
-    /**
-     * Find the middleNode of the given linked List. If there is two middle consider the second as middle.
-     * [1,2,3,4] middle is 3
-     * [1,2,3] middle is 2
-     * You can traverse the list only once. No extra data structure like array or STL.
-     * Time Complexity O(n), Extra Space Complexity O(1).
-     **/
+    if (head == NULL || head->next == NULL)
+        return head;
 
-    // Write your solution here:
+    ListNode *slow = head;
+    ListNode *fast = head;
 
-    
+    while (fast != NULL && fast->next != NULL)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
 
-    // End of your solution
+    return slow;
 }
 
 int main()
