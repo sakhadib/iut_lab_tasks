@@ -63,5 +63,16 @@ namespace bottle_of_oop
 
             return ret;
         }
+
+        /*public string song()
+        {
+            string ret = "";
+            for (int i = 99; i >= 0; i++)
+            {
+                ret += verse(i);
+            }
+
+            return ret;
+        }*/
     }
 }

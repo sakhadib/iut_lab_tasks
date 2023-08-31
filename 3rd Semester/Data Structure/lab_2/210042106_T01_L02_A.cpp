@@ -5,11 +5,11 @@ using namespace std;
 class node{
     public:
         int data;
-        node *my_next_node;
+        node *next;
     
         node(int data){
             this->data = data;
-            this->my_next_node = NULL;
+            this->next = NULL;
         }
 };
 
@@ -18,36 +18,36 @@ node *head = n1;
 
 void insert_front(int key){
     node *current = new node(key); 
-    current->my_next_node = head; 
+    current->next = head; 
     head = current;  
 }
 
 void insert_back(int key){
     node *current = new node(key);
-    current->my_next_node = NULL;
-    node *my_temporary_node = head;
-    while(my_temporary_node != NULL){  
-        if(my_temporary_node->my_next_node == NULL){ 
-            my_temporary_node->my_next_node = current; 
+    current->next = NULL;
+    node *temp = head;
+    while(temp != NULL){  
+        if(temp->next == NULL){ 
+            temp->next = current; 
             break; 
         }
-        my_temporary_node = my_temporary_node->my_next_node; 
+        temp = temp->next; 
     }
 }
 
 void Insert_after_node(int key, int v){
     bool is_found = false;
     node *current = new node(key);
-    node *my_temporary_node = head;
-    while(my_temporary_node != NULL){  
-        if(my_temporary_node->data == v){ 
-            node *temp2 = my_temporary_node->my_next_node; 
-            my_temporary_node->my_next_node = current; 
-            current->my_next_node = temp2; 
+    node *temp = head;
+    while(temp != NULL){  
+        if(temp->data == v){ 
+            node *temp2 = temp->next; 
+            temp->next = current; 
+            current->next = temp2; 
             is_found = true;
             break;
         }
-        my_temporary_node = my_temporary_node->my_next_node; 
+        temp = temp->next; 
     }
 
     if(is_found == false){
@@ -58,14 +58,14 @@ void Insert_after_node(int key, int v){
 
 void update_node(int key, int v){
     bool is_found = false;
-    node *my_temporary_node = head;
-    while(my_temporary_node != NULL){  
-        if(my_temporary_node->data == v){ 
-            my_temporary_node->data = key;
+    node *temp = head;
+    while(temp != NULL){  
+        if(temp->data == v){ 
+            temp->data = key;
             is_found = true;
             break;
         }
-        my_temporary_node = my_temporary_node->my_next_node; 
+        temp = temp->next; 
     }
 
     if(is_found == false){
@@ -75,20 +75,20 @@ void update_node(int key, int v){
 
 void remove_node(int key){
     bool is_found = false;
-    node *my_temporary_node = head;
+    node *temp = head;
     if(head->data == key){
-        head = head->my_next_node;
+        head = head->next;
         is_found = true;
     }
     else{
-        while(my_temporary_node->my_next_node != NULL){  
-        if(my_temporary_node->my_next_node->data == key){ 
-            node *temp2 = my_temporary_node->my_next_node->my_next_node;
-            my_temporary_node->my_next_node = temp2;
+        while(temp->next != NULL){  
+        if(temp->next->data == key){ 
+            node *temp2 = temp->next->next;
+            temp->next = temp2;
             is_found = true;
             break;
         }
-        my_temporary_node = my_temporary_node->my_next_node; 
+        temp = temp->next; 
     }
     }
     
@@ -99,29 +99,29 @@ void remove_node(int key){
 }
 
 void remove_head(){
-    node *my_temporary_node = head->my_next_node;  //head er porer address ta store kore nilam
-    head = my_temporary_node;  // ebar oi my_next_node ta ke head e rakhtesi
+    node *temp = head->next;  //head er porer address ta store kore nilam
+    head = temp;  // ebar oi next ta ke head e rakhtesi
 }
 
 void remove_end(){
-    node *my_temporary_node = head;
+    node *temp = head;
     node *temp2;
-    while(my_temporary_node != NULL){ 
-        if(my_temporary_node->my_next_node->my_next_node == NULL){
-            temp2 = my_temporary_node;
+    while(temp != NULL){ 
+        if(temp->next->next == NULL){
+            temp2 = temp;
             break;
         }
-        my_temporary_node = my_temporary_node->my_next_node; 
+        temp = temp->next; 
     }
-    temp2->my_next_node = NULL;
+    temp2->next = NULL;
 }
 
 
 void print(){
-    node *my_temporary_node = head;
-    while(my_temporary_node != NULL){ 
-        cout << my_temporary_node->data << " "; 
-        my_temporary_node = my_temporary_node->my_next_node; 
+    node *temp = head;
+    while(temp != NULL){ 
+        cout << temp->data << " "; 
+        temp = temp->next; 
     }
     cout << endl;
 }
@@ -129,19 +129,19 @@ void print(){
 
 int main(){
             
-    insert_front(20);
-    insert_back(64);
+    insert_front(3);
+    insert_back(5);
     
     while(true){
         cout << "Please input a number_____  ";
-        int bash;
-        cin >> bash;
+        int command;
+        cin >> command;
 
-        if(bash == 8){
+        if(command == 8){
             break;
         }
 
-        else if(bash == 1){
+        else if(command == 1){
             //insert at front
             int key;
             cin >> key;
@@ -149,7 +149,7 @@ int main(){
             print();
         }
 
-        else if(bash == 2){
+        else if(command == 2){
             //insert at back
             int key;
             cin >> key;
@@ -157,39 +157,39 @@ int main(){
             print();
         }
 
-        else if(bash == 3){
+        else if(command == 3){
             int key, v;
             cin >> key >> v;
             Insert_after_node(key, v);
             print();
         }
 
-        else if(bash == 4){
+        else if(command == 4){
             int key, v;
             cin >> key >> v;
             update_node(key, v);
             print();
         }
 
-        else if(bash == 5){
+        else if(command == 5){
             remove_head();
             print();
         }
 
-        else if(bash == 6){
+        else if(command == 6){
             int key;
             cin >> key;
             remove_node(key);
             print();
         }
 
-        else if(bash == 7){
+        else if(command == 7){
             remove_end();
             print();
         }
 
 
-        else if(bash == 0){
+        else if(command == 0){
             print(); 
         }
 

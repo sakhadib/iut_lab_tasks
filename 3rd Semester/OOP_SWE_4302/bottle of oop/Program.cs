@@ -11,7 +11,7 @@ namespace bottle_of_oop
         static void Main(string[] args)
         {
             bottle b = new bottle();
-            Console.WriteLine(b.verses(2, 6));
+            Console.WriteLine(b.verse(99));
             Console.Read();
         }
     }
