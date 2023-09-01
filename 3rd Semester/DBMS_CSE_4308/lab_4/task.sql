@@ -9,7 +9,9 @@ SELECT (DIR_FIRSTNAME || DIR_LASTNAME) FROM director);
 
 
 -- B : Find the actresses with the same first name.
-SELECT ACT_FIRSTNAME FROM actor WHERE ACT_GENDER = 'F' GROUP BY ACT_FIRSTNAME;
+SELECT a1.ACT_FIRSTNAME, a1.ACT_LASTNAME FROM actor a1, actor A2
+WHERE a1.ACT_FIRSTNAME = a2.ACT_FIRSTNAME 
+AND a1.ACT_ID <> a2.ACT_ID AND a1.ACT_GENDER = 'F';
 
 -- C : Find the list of all the full names stored in the database.
 SELECT (ACT_FIRSTNAME || ACT_LASTNAME) AS NAME FROM actor
