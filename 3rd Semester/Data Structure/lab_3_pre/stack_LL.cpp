@@ -172,15 +172,22 @@ class mystack{
 int main() {
     
     mystack s1;
-    for(int i = 0; i < 5; i++){
-        s1.push(i);
-    }
+    s1.push(1);
+    s1.push(2);
+    s1.push(3);
 
-    cout << s1.Top() << endl;
+    s1.print();
+
     s1.pop();
-    cout << s1.Top() << endl;
-    s1.push(21);
-    cout << s1.Top() << endl;
+    s1.pop();
+    s1.pop();
+
+    if(s1.isEmpty()){
+        cout << "Empty" << endl;
+    }
+    else{
+        cout << "Not Empty" << endl;
+    }
 
     s1.print();
 
