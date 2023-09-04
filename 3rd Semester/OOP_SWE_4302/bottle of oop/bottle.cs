@@ -56,9 +56,9 @@ namespace bottle_of_oop
         {
             string ret = "";
 
-            for(int i=max; i>= min; i++)
+            for(int i=max; i>= min; i--)
             {
-                ret += verse(i);
+                ret += (verse(i) + "\n\n");
             }
 
             return ret;
