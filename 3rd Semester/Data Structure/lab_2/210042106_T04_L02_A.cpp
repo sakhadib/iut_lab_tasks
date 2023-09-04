@@ -4,9 +4,9 @@ using namespace std;
 class Node {
 public:
     int value;
-    Node* next;
+    Node* NEXT;
     
-    Node(int val) : value(val), next(NULL) {}
+    Node(int val) : value(val), NEXT(NULL) {}
 };
 
 class LinkedList {
@@ -20,10 +20,10 @@ public:
             head = new Node(value);
         } else {
             Node* current = head;
-            while (current->next) {
-                current = current->next;
+            while (current->NEXT) {
+                current = current->NEXT;
             }
-            current->next = new Node(value);
+            current->NEXT = new Node(value);
         }
     }
     
@@ -33,13 +33,13 @@ public:
         }
         
         Node* current = head;
-        while (current->next) {
-            if (current->value == current->next->value) {
-                Node* temp = current->next;
-                current->next = current->next->next;
+        while (current->NEXT) {
+            if (current->value == current->NEXT->value) {
+                Node* temp = current->NEXT;
+                current->NEXT = current->NEXT->NEXT;
                 delete temp;
             } else {
-                current = current->next;
+                current = current->NEXT;
             }
         }
     }
@@ -48,7 +48,7 @@ public:
         Node* current = head;
         while (current) {
             cout << current->value << " ";
-            current = current->next;
+            current = current->NEXT;
         }
         cout << endl;
     }
@@ -57,7 +57,7 @@ public:
         Node* current = head;
         while (current) {
             Node* temp = current;
-            current = current->next;
+            current = current->NEXT;
             delete temp;
         }
     }
