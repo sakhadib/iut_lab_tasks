@@ -22,14 +22,17 @@ SELECT (REV_NAME) AS NAME FROM reviewer;
 
 -- D : Find the movie titles that did not receive any ratings.
 SELECT MOV_TITLE FROM movie
-WHERE MOV_ID NOT IN (SELECT MOV_ID FROM RATING);
+WHERE MOV_ID NOT IN (SELECT DISTINCT MOV_ID FROM RATING);
+
+SELECT MOV_TITLE FROM movie
+WHERE MOV_ID NOT IN (SELECT DISTINCT MOV_ID FROM RATING);
 
 
 -- E : Find the average rating of all movies.
 SELECT AVG(REV_STARS) AS average_RATING FROM rating;
 
 -- F : Find the minimum rating for each movie and display them in descending order of rating.
-SELECT MOV_TITLE, MIN(REV_STARS) AS MIN_RATING FROM rating
+SELECT movie.MOV_TITLE, rating.MIN(REV_STARS) AS MIN_RATING FROM rating
 INNER JOIN movie ON rating.MOV_ID = movie.MOV_ID
 GROUP BY MOV_TITLE
 ORDER BY MIN_RATING DESC;
@@ -43,18 +46,43 @@ SELECT A.MOV_ID FROM
 (SELECT AVG(REV_STARS) AS AVG_RATING FROM RATING) B
 WHERE A.SUM > B.AVG_RATING);
 
+
 -- H : Find the name of actors/actresses and the number of ratings received by the movies in which they played a role.
 
 -- I : Find the name of the director of the movie having the highest average rev_star
 
 -- J : Find all the movie-related information of movies acted and directed by the same person.
-SELECT * FROM MOVIE WHERE MOV_ID IN(
-SELECT MOV_ID FROM DIRECTION WHERE DIR_ID IN(
-SELECT DIR_ID FROM DIRECTOR WHERE DIR_FIRSTNAME || DIR_LASTNAME 
-IN (SELECT (ACT_FIRSTNAME || ACT_LASTNAME) FROM ACTOR)));
+SELECT * FROM MOVIE WHERE MOV_ID IN
+(SELECT MOV_ID FROM DIRECTION WHERE DIR_ID IN
+(SELECT DIR_ID FROM DIRECTOR WHERE DIR_FIRSTNAME || DIR_LASTNAME 
+IN (SELECT ACT_FIRSTNAME || ACT_LASTNAME FROM ACTOR)));
 
 
 -- K : Find the title and average rating of the movies that have an average rev_star of more than 7
 
 
 -- L : Find the reviewer who gives the highest number of lowest rev_star.
+
+
+
+SELECT d.name, d.location,
+(SELECT COUNT(*) FROM teachers t WHERE d.name = t.dept) AS count
+FROM departments d;
+
+select s.id, s.name, s.dept, d.location
+FROM students s, departments d
+WHERE s.dept = d.name and d.location = 'Academic Building 2';
+
+select t.name, t.designation
+(select count(*) from supervisors s where t.ID = s.TID) as count
+from teachers t;
+
+
+select t.name, t.designation
+(select count(*) from supervisors s where t.ID = s.TID) as count
+from teachers t where count >= 5;
+
+
+SELECT d.name, d.location, d.rownum as rank,
+(SELECT COUNT(*) FROM student s WHERE d.name = s.dept) AS count
+FROM departments d Where row <= 3 Order by count DESC;
