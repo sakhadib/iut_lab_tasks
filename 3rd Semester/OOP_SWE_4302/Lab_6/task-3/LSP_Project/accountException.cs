@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace LSP_Project
 {
-    internal class accountException
+    internal class accountException : Exception
     {
+        public accountException() { }
+
+        public accountException(string message) : base(message)
+        {
+
+        }
     }
 }

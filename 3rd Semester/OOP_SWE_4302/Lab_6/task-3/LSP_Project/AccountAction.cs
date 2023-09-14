@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace LSP_Project
 {
-    internal interface account
+    internal interface AccountAction
     {
+        double CalculateInterest();
+
     }
 }

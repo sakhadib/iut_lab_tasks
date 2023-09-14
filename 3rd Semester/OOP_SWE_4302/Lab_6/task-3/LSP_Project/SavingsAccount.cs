@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace LSP_Project
 {
-    internal class CurrentAccount : BaseAccount, AccountAction
+    internal class SavingsAccount : BaseAccount, AccountAction
     {
         public double InterestRate;
 
-        public CurrentAccount(string name, string signature, int acc_no, double balance, double interest_rate)
+        public SavingsAccount(string name, string signature, int acc_no, double balance, double interest_rate)
         {
             this.AccountHolderName = name;
             this.AccountNumber = acc_no;
@@ -21,7 +21,8 @@ namespace LSP_Project
 
         public string withdraw(double amount)
         {
-            if (amount <= 20000 && Balance - amount >= 500)
+
+            if (amount <= 15000 && Balance - amount >= 1000)
             {
                 Balance -= amount;
                 return "successful";
@@ -36,8 +37,6 @@ namespace LSP_Project
         {
             return ((Balance * InterestRate) / 100);
         }
-
-
 
     }
 }

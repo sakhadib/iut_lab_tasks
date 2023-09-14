@@ -3,10 +3,11 @@ namespace FizzTest
 {
     public class Tests
     {
-        public FizzyBuzz fizzbuzz = new FizzyBuzz();
+        public FizzyBuzz fizzbuzz;
         [SetUp]
         public void Setup()
         {
+            fizzbuzz = new FizzyBuzz();
         }
 
         [Test]
