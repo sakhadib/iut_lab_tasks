@@ -1,0 +1,122 @@
+DS -> Data Structures
+
+rifah labibah takia 
+
+FIFO - First In First Out -> Data Structures
+
+
+
+nondito noroke
+ponchokonna
+Kothao keu nei
+Shuvro geche bone
+Misir Alir Choshma
+Aj himur Biye
+________________________
+
+
+LIFO - Last In First Out -> Data Structures
+
+
+Any Access -> Data Structures
+
+
+Data Structure 
+
+1. LIFO -> Stack
+2. FIFO -> Queue
+3. Any Access -> Linked List, Array, Tree, Graph
+
+
+int n;
+scanf("%d", &n);
+int array[50000000];
+
+Linked List -> solves the size problem of array
+
+
+[nafisa][antara][Takia]
+
+List<int> list = new List<int>();
+list.Add(6);
+
+vector<int> v;
+
+
+Time Complexity -> How much time it takes to execute a program
+
+- Best Case
+- General Case
+- Worst Case - Big O Notation
+
+
+cin >> n;
+cout << n;
+O(1) -> Constant Time
+
+for(int i = 0; i < n; i++)
+{
+    cout << i << endl;
+}
+
+O(n) -> Linear Time
+
+
+for(int i = 0; i < n; i++)
+{
+    for(int j = 0; j < n; j++)
+    {
+        cout << i << " " << j << endl;
+    }
+}
+
+O(n^2) -> Quadratic Time
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    
+    //input n
+    cin >> n;
+
+
+    //n porjonto print korbo
+    for(int i = 0; i < n; i++)
+    {
+        cout << i << endl;
+    }
+
+
+    //n^2 porjonto print korbo
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < n; j++)
+        {
+            cout << i << " " << j << endl;
+        }
+    }
+}
+
+
+Worst case of program = O(1) + O(n) + O(n^2) = O(n^2)
+
+
+[ data | pointer_to_next_node ]
+
+
+#122 -> [ 1 | #332 ] - head
+
+#332 -> [ 6 | #556 ]
+
+#432 -> [ 9 | #231 ]
+
+#556 -> [ 7 | #432 ]
+
+#231 -> [ 0 | NULL ]
+
+.
+.
+.
+
