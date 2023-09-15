@@ -19,6 +19,8 @@ class linklist{
     public:
         node *head;
 
+        linklist() : head(NULL) {}
+
         bool isempty(){
             if(head->next == NULL){
                 return true;
@@ -35,12 +37,37 @@ class linklist{
             current->next = temp;
         }
 
+        void insert_back(int key){
+            node *current = new node(key);
+            node *temp = head;
+            while(temp != NULL){
+                if(temp->next == NULL){
+                    temp->next = current;
+                    current->next = NULL;
+                }
+                temp = temp->next;
+            }
+        }
+
+        void insert_after(int key, int val){
+            node *current = new node(key);
+            node *temp = head;
+            while(temp != NULL){
+                if(temp->data == val){
+                    current->next = temp->next;
+                    temp->next = current;
+                }
+                temp = temp->next;
+            }
+        }
+
         void print(){
             node *temp = head;
             while(temp != NULL){
                 cout << temp->data << " ";
                 temp = temp->next;
             }
+            cout << endl;
         }
 
 };
@@ -62,7 +89,15 @@ int main() {
         if(x!=-1)
             l.insert_front(x);
     }
+    l.print();
+    while(x != -2){
+        cin >> x;
+        if(x!=-2)
+            l.insert_back(x);
+    }
+    l.print();
 
+    l.insert_after(9, 6);
     l.print();
 
     
