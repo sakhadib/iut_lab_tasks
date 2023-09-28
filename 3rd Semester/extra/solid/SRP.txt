@@ -1,0 +1,63 @@
+S - Single Responsibility Principle
+
+Change Request
+
+Employee Management System
+
+Class Employee
+- id 
+- name
+- email
+- phone
+
++ getPay()
++ CalculateTax()
++ getBonus()
++ GenerateReport()
++ SendEmail()
++ ApplicationforLeave()
++ ApplyforLoan()
+
+
+
+Developer Tauhid
+
+
+
+Class Student
+
+/+ payFee()              -> cashier
+/+ GenerateReport()      -> teacher
+/+ MailSend()            -> teacher
+/+ CalculateGrade()      -> Registrar
+/+ Avarage gpa()         -> Registrar
+/+ HighestGpa()          -> Registrar
++ ApplyforScholarship() -> Department Office
++ ApplyforLoan()        -> Account Office
++ ApplyforLeave()       -> teacher
+
+
+Class Student
++ payFee
+
+
+Class GradeCalculator
++ CalculateGrade()
++ Avarage gpa()
++ HighestGpa()
+
+Class SudyRelatedClass
++ ApplyforLeave()
++ MailSend() 
++ GenerateReport()
+
+
+Class ScholarshipHandle
++ ApplyforScholarship()
++ GetScholarship()
++ Status()
+
+Class LoanHandle
++ ApplyforLoan()
++ GetLoan()
++ Status()

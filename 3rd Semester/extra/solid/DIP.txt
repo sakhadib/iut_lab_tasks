@@ -1,0 +1,31 @@
+DIP - Dipendancy Inversion Principle
+
+Rule 1 :
+High Level modules should not depend on low level modules. Both should depend on abstractions.
+
+Rule 2 :
+Abstractions should not depend on details. Details should depend on abstractions.
+
+
+
+
+Program Flow Diagram
+--------------------
+
+                        Low
+                Mid   
+            /           Low
+Main - High 
+            \           Low
+                Mid
+                        Low
+
+
+
+pair<int, int> p1 = make_pair(1, 2);
+
+p1.first // 1
+p1.second // 2
+
+p1.start
+p1.end

@@ -1,0 +1,69 @@
+- Abstraction     1
+- Encapsulation   1
+- Inheritance     1
+- Polymorphism    1
+
+in C Language
+ #include<stdio.h>
+ #include<tauhid.h>
+
+in tauhid.h
+#include<math.h>
+
+
+polymorphism in C
+
+void copy(getchar(char c)){
+    putchar(c);
+}
+
+
+CPP - interface X
+
+diamond problem
+
+                        class A
+                    /             \
+                class B           class C
+                    \             /                    
+                        class D
+
+
+interface X{
+    void f(int abc, int xyz);
+}
+
+interface Y{
+    void f(string q, char p);
+}
+
+
+class A implements X,Y{
+    void f(int abc, int xyz){
+        //code
+    }
+
+    void f(string q, char p){
+        //code
+    }
+}
+
+
+X xyz = new A();
+
+
+
+Overloading -> compile time polymorphism
+Overriding -> run time polymorphism
+
+
+interface solution -> JAVA -> C# -> PHP -> RUBY
+
+solution -> partial class -> C#
+
+
+S - Single Responsibility Principle
+O - Open Closed Principle
+L - Liskov Substitution Principle
+I - Interface Segregation Principle
+D - Dependency Inversion Principle
