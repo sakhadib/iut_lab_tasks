@@ -21,7 +21,7 @@ namespace MinStackProject
             }
             else
             {
-                if (Holder[Holder.Count() - 1] > value)
+                if (Holder[Holder.Count() - 1] < value)
                 {
                     Holder.Add(value);
                 }

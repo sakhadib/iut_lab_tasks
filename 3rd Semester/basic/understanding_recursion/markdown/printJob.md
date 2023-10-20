@@ -174,3 +174,7 @@ int main() {
     return 0;
 }
 ```
+
+Here we are printing fibonacci series using recursion. We are using a variable n to keep track of the number of terms we have to print. We are using two more variables a and b to keep track of the last two numbers of the series. We are printing a and then calling the fibo function again with n-1, b and a+b. We are doing this until n is 0.
+
+### This Function execution cycle
