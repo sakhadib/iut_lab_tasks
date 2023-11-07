@@ -1,8 +1,0 @@
-F:\iut-lab\3rd Semester\OOP_SWE_4302\Lab_6\task-2\MinStackProject\bin\Debug\MinStackProject.exe.config
-F:\iut-lab\3rd Semester\OOP_SWE_4302\Lab_6\task-2\MinStackProject\bin\Debug\MinStackProject.exe
-F:\iut-lab\3rd Semester\OOP_SWE_4302\Lab_6\task-2\MinStackProject\bin\Debug\MinStackProject.pdb
-F:\iut-lab\3rd Semester\OOP_SWE_4302\Lab_6\task-2\MinStackProject\obj\Debug\MinStackProject.csproj.AssemblyReference.cache
-F:\iut-lab\3rd Semester\OOP_SWE_4302\Lab_6\task-2\MinStackProject\obj\Debug\MinStackProject.csproj.SuggestedBindingRedirects.cache
-F:\iut-lab\3rd Semester\OOP_SWE_4302\Lab_6\task-2\MinStackProject\obj\Debug\MinStackProject.csproj.CoreCompileInputs.cache
-F:\iut-lab\3rd Semester\OOP_SWE_4302\Lab_6\task-2\MinStackProject\obj\Debug\MinStackProject.exe
-F:\iut-lab\3rd Semester\OOP_SWE_4302\Lab_6\task-2\MinStackProject\obj\Debug\MinStackProject.pdb

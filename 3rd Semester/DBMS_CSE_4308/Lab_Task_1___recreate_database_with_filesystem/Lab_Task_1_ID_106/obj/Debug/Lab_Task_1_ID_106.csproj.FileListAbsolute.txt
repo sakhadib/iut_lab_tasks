@@ -1,8 +1,0 @@
-F:\iut-lab\3rd Semester\DBMS_CSE_4308\Lab_Task_1___recreate_database_with_filesystem\Lab_Task_1_ID_106\bin\Debug\Lab_Task_1_ID_106.exe.config
-F:\iut-lab\3rd Semester\DBMS_CSE_4308\Lab_Task_1___recreate_database_with_filesystem\Lab_Task_1_ID_106\bin\Debug\Lab_Task_1_ID_106.exe
-F:\iut-lab\3rd Semester\DBMS_CSE_4308\Lab_Task_1___recreate_database_with_filesystem\Lab_Task_1_ID_106\bin\Debug\Lab_Task_1_ID_106.pdb
-F:\iut-lab\3rd Semester\DBMS_CSE_4308\Lab_Task_1___recreate_database_with_filesystem\Lab_Task_1_ID_106\obj\Debug\Lab_Task_1_ID_106.csproj.AssemblyReference.cache
-F:\iut-lab\3rd Semester\DBMS_CSE_4308\Lab_Task_1___recreate_database_with_filesystem\Lab_Task_1_ID_106\obj\Debug\Lab_Task_1_ID_106.csproj.SuggestedBindingRedirects.cache
-F:\iut-lab\3rd Semester\DBMS_CSE_4308\Lab_Task_1___recreate_database_with_filesystem\Lab_Task_1_ID_106\obj\Debug\Lab_Task_1_ID_106.csproj.CoreCompileInputs.cache
-F:\iut-lab\3rd Semester\DBMS_CSE_4308\Lab_Task_1___recreate_database_with_filesystem\Lab_Task_1_ID_106\obj\Debug\Lab_Task_1_ID_106.exe
-F:\iut-lab\3rd Semester\DBMS_CSE_4308\Lab_Task_1___recreate_database_with_filesystem\Lab_Task_1_ID_106\obj\Debug\Lab_Task_1_ID_106.pdb

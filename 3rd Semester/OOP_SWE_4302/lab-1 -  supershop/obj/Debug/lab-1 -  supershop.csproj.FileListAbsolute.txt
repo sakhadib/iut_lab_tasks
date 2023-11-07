@@ -1,8 +1,0 @@
-F:\iut\sem - 3\OOP Lab\lab-1 -  supershop\obj\Debug\lab-1 -  supershop.csproj.AssemblyReference.cache
-F:\iut\sem - 3\OOP Lab\lab-1 -  supershop\obj\Debug\lab-1 -  supershop.csproj.SuggestedBindingRedirects.cache
-F:\iut\sem - 3\OOP Lab\lab-1 -  supershop\obj\Debug\lab-1 -  supershop.csproj.CoreCompileInputs.cache
-F:\iut\sem - 3\OOP Lab\lab-1 -  supershop\bin\Debug\lab-1 -  supershop.exe.config
-F:\iut\sem - 3\OOP Lab\lab-1 -  supershop\bin\Debug\lab-1 -  supershop.exe
-F:\iut\sem - 3\OOP Lab\lab-1 -  supershop\bin\Debug\lab-1 -  supershop.pdb
-F:\iut\sem - 3\OOP Lab\lab-1 -  supershop\obj\Debug\lab-1 -  supershop.exe
-F:\iut\sem - 3\OOP Lab\lab-1 -  supershop\obj\Debug\lab-1 -  supershop.pdb

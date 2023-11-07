@@ -1,8 +1,0 @@
-F:\iut-lab\3rd Semester\OOP_SWE_4302\bottle of oop\bin\Debug\bottle of oop.exe.config
-F:\iut-lab\3rd Semester\OOP_SWE_4302\bottle of oop\bin\Debug\bottle of oop.exe
-F:\iut-lab\3rd Semester\OOP_SWE_4302\bottle of oop\bin\Debug\bottle of oop.pdb
-F:\iut-lab\3rd Semester\OOP_SWE_4302\bottle of oop\obj\Debug\bottle_of_oop.csproj.AssemblyReference.cache
-F:\iut-lab\3rd Semester\OOP_SWE_4302\bottle of oop\obj\Debug\bottle_of_oop.csproj.SuggestedBindingRedirects.cache
-F:\iut-lab\3rd Semester\OOP_SWE_4302\bottle of oop\obj\Debug\bottle_of_oop.csproj.CoreCompileInputs.cache
-F:\iut-lab\3rd Semester\OOP_SWE_4302\bottle of oop\obj\Debug\bottle of oop.exe
-F:\iut-lab\3rd Semester\OOP_SWE_4302\bottle of oop\obj\Debug\bottle of oop.pdb
