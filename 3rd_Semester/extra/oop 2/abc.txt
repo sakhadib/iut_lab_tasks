@@ -1,0 +1,346 @@
+ENUM -> Fixed type,  fixed number of objects
+
+Q : How many colors in rainbow ?
+A : 7 -> VIBGYOR
+
+
+class violet{
+    ....
+
+
+}
+
+
+public enum rainbow{
+    Violet, Indigo, Blue, Green, Yellow, Orange, Red;
+}
+
+
+
+public static class rainbow{
+    static string Violet = "Violet";
+    static string Indigo = "Indigo";
+    .
+    .
+    .
+}
+
+
+
+ in main
+ ______________
+
+ Console.Writeline(rainbow.violet); // violet
+
+
+
+
+ Class ford{
+    .....
+
+
+ }
+
+ class  tesla{
+    .....
+
+
+ }
+
+ public enum cars{
+    ford, tesla;
+ }
+
+
+
+
+ coupling -> dependency between two classes
+
+    class A{
+        B b = new B();
+        Amethod(){
+            b.method();
+        }
+    }
+    
+    class B{
+        Bmethod(){
+            ....
+        }
+    }
+
+    main
+    {
+        A a = new A();
+        a.Amethod();
+    }
+
+
+    !!!  A is tightly coupled with B  !!!
+
+    -> loose coupling
+
+    class A{
+        IB b = new B();
+        Amethod(){
+            b.method();
+        }
+    }
+
+    interface IB{
+        method();
+    }
+
+    class B : IB{
+        method(){
+            ....
+        }
+    }
+
+    class C : IB{
+        method(){
+            ....
+        }
+    }
+
+    
+
+
+
+Cohesion -> how much a class is related to itself
+
+    class A{
+        method1(){
+            ....
+        }
+        method2(){
+            method3();
+        }
+        private method3(){
+            ....
+        }
+    }
+
+    class B{
+        method1(){
+            ....
+        }
+        method2(){
+            ....
+        }
+        method3(){
+            ....
+        }
+    }
+
+    class C{
+        method1(){
+            ....
+        }
+        method2(){
+            ....
+        }
+        method3(){
+            ....
+        }
+    }
+
+
+    !!!  A is highly cohesive  !!!
+
+
+    ###    We always want to have high cohesion and loose coupling
+
+
+
+
+Method Overloading -> same method name with different parameters
+
+    class calculate{
+        int add(int a, int b){
+            return a+b;
+        }
+
+        int add(int a, int b, int c){
+            return a+b+c;
+        }
+
+        int add(int a, int b, int c, int d){
+            return a+b+c+d;
+        }
+
+        string add(string a, string b){
+            return a+b;
+        }
+    }
+
+
+    main
+    {
+        calculate c = new calculate();
+        c.add(1,2);         // 3
+        c.add(1,2,3);       // 6
+        c.add(1,2,3,4);     // 10
+        c.add("hello", "world");    // helloworld
+    }
+
+
+
+    Method Overriding -> same method name with same parameters in parent and child class
+
+
+
+    class A{
+        int method1(int a, int b){
+            return b % a;
+        }
+
+        int method1(int a, int b, int c){
+            return a + b + c;
+        }
+    }
+
+    class B : A{
+        int Override method1(int a, int b){
+            return a + b;
+        }
+
+        int Override method1(int a, int b, int c){
+            return a + b + c;
+        }
+    }
+
+
+    main
+    {
+        A a = new A();
+        a.method1(2, 5);        // 1
+
+        B b = new B();
+        b.method1(2, 5);        // 7
+    }
+
+
+
+-> Lab 1
+
+interface product{
+    int getprice();
+    string getname();
+    double get_discount();
+
+    int product_id{get; set;}
+}
+
+class grocery : product{
+
+    int product_id{get; set;}
+    double discount{get; set;}
+    double price{get; set;}
+
+    // constructor
+    public grocery(int id, double discount, double price){
+        product_id = id;
+        this.discount = discount;
+        this.price = price;
+    }
+    
+    int getprice(){
+        return 100;
+    }
+
+    string getname(){
+        return "grocery";
+    }
+
+    double get_discount(){
+        
+        double dc  = price - price * discount/100;
+        return dc;
+    }
+
+}
+
+
+
+class supershop{
+    List <product> products = new List<product>();
+
+    public void add_product(product p){
+        products.Add(p);
+    }
+
+    public void print_products(){
+        foreach(product p in products){
+            Console.WriteLine(p.getname());
+            Console.WriteLine(p.getprice());
+            Console.WriteLine(p.get_discount());
+        }
+    }
+
+    public void remove_product(int id){
+        foreach(product p in products){
+            if(p.product_id == id){
+                products.Remove(p);
+                break;
+            }
+        }
+    }
+
+    public void count(){
+        Console.WriteLine(products.Count);
+    }
+
+    public void count(product p){
+        int c = 0;
+        foreach(product pp in products){
+            if(pp.getname() == p.getname()){
+                c++;
+            }
+        }
+        Console.WriteLine(c);
+    }
+}
+
+
+main{
+    supershop s = new supershop();
+    grocery g = new grocery(1, 10, 100);
+    s.add_product(g);
+
+    s.count(g); // 1
+}
+
+
+
+-> 99 bottles of beer
+
+99 bottles of beer on the wall, 99 bottles of beer.
+Take one down and pass it around, 98 bottles of beer on the wall.
+
+98 bottles of beer on the wall, 98 bottles of beer.
+Take one down and pass it around, 97 bottles of beer on the wall.
+
+.
+.
+.
+
+3 bottles of beer on the wall, 3 bottles of beer.
+Take one down and pass it around, 2 bottles of beer on the wall.
+
+2 bottles of beer on the wall, 2 bottles of beer.
+Take one down and pass it around, 1 bottle of beer on the wall.
+
+1 bottle of beer on the wall, 1 bottle of beer.
+Take one down and pass it around, no more bottles of beer on the wall.
+
+No more bottles of beer on the wall, no more bottles of beer.
+Go to the store and buy some more, 99 bottles of beer on the wall.
+
+
+
+
+
+static void main(){
+    
+}

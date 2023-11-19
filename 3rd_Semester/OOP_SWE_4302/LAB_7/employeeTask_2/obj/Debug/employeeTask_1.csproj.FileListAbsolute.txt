@@ -1,0 +1,16 @@
+F:\iut-lab\3rd Semester\OOP_SWE_4302\LAB_7\employeeTask_1\bin\Debug\employeeTask_1.exe.config
+F:\iut-lab\3rd Semester\OOP_SWE_4302\LAB_7\employeeTask_1\bin\Debug\employeeTask_1.exe
+F:\iut-lab\3rd Semester\OOP_SWE_4302\LAB_7\employeeTask_1\bin\Debug\employeeTask_1.pdb
+F:\iut-lab\3rd Semester\OOP_SWE_4302\LAB_7\employeeTask_1\obj\Debug\employeeTask_1.csproj.AssemblyReference.cache
+F:\iut-lab\3rd Semester\OOP_SWE_4302\LAB_7\employeeTask_1\obj\Debug\employeeTask_1.csproj.SuggestedBindingRedirects.cache
+F:\iut-lab\3rd Semester\OOP_SWE_4302\LAB_7\employeeTask_1\obj\Debug\employeeTask_1.csproj.CoreCompileInputs.cache
+F:\iut-lab\3rd Semester\OOP_SWE_4302\LAB_7\employeeTask_1\obj\Debug\employeeTask_1.exe
+F:\iut-lab\3rd Semester\OOP_SWE_4302\LAB_7\employeeTask_1\obj\Debug\employeeTask_1.pdb
+F:\iut-lab\3rd Semester\OOP_SWE_4302\LAB_7\employeeTask_2\bin\Debug\employeeTask_1.exe.config
+F:\iut-lab\3rd Semester\OOP_SWE_4302\LAB_7\employeeTask_2\bin\Debug\employeeTask_1.exe
+F:\iut-lab\3rd Semester\OOP_SWE_4302\LAB_7\employeeTask_2\bin\Debug\employeeTask_1.pdb
+F:\iut-lab\3rd Semester\OOP_SWE_4302\LAB_7\employeeTask_2\obj\Debug\employeeTask_1.csproj.AssemblyReference.cache
+F:\iut-lab\3rd Semester\OOP_SWE_4302\LAB_7\employeeTask_2\obj\Debug\employeeTask_1.csproj.SuggestedBindingRedirects.cache
+F:\iut-lab\3rd Semester\OOP_SWE_4302\LAB_7\employeeTask_2\obj\Debug\employeeTask_1.csproj.CoreCompileInputs.cache
+F:\iut-lab\3rd Semester\OOP_SWE_4302\LAB_7\employeeTask_2\obj\Debug\employeeTask_1.exe
+F:\iut-lab\3rd Semester\OOP_SWE_4302\LAB_7\employeeTask_2\obj\Debug\employeeTask_1.pdb

@@ -1,0 +1,232 @@
+Class Employee
+    - calculateTax()
+    - calculateNetSalary()
+    - calculateHouseRent()
+    - calculateMedicalAllowance()
+    - calculateBasicSalary()
+    - ApplicationForLeave()
+    - ApplyForBonus()
+    - ApplyForPromotion()
+    - EducationTour()
+
+
+Class Report Generator{
+    - generateReport(employee e){
+        double tax = e.calculateTax()
+        doouble netSalary = e.calculateNetSalary()
+        double houseRent = e.calculateHouseRent()
+        double medicalAllowance = e.calculateMedicalAllowance()
+        double basicSalary = e.calculateBasicSalary()
+
+    }
+}
+
+
+--------------------------------------------------------------------------------
+
+Class employee
+- name
+.
+.
+.
+
+
+Class ReportGenerator{
+    claculateTax(EMPLOYEE E){
+        // implement
+    }
+    - calculateNetSalary(EMPLOYEE E){
+        if(E.getLeaveCount() > 10){
+            // No increament
+        }
+        else if(E.getLeaveCount() > 5){
+            // less increament
+        }
+        else{
+            // increament
+        }
+    }
+    - calculateHouseRent(EMPLOYEE E){
+        // implement
+    }
+    - calculateMedicalAllowance(EMPLOYEE E){
+        // implement
+    }
+    - calculateBasicSalary(EMPLOYEE E){
+        // implement
+    }
+}
+
+Class EmployeeOperation{
+    - getLeaveCount(){
+        // implement
+    }
+    - LeaveApplication(){
+        if(getLeaveCount() > 10){
+            // No implementation
+        }
+        else{
+            sendApplication();
+        }
+    }
+}
+
+
+main{
+    Employee e = new Employee()
+    ReportGenerator r = new ReportGenerator()
+    r.generateReport(e)
+
+    double e1salary = r.calculateNetSalary(e)
+}
+
+
+
+
+-----------------------------------------------------------------------
+Dependency Inversion Principle
+
+interface vehicle{
+    - Go();
+    - Start();
+    - Stop();
+}
+
+class Car implements vehicle{
+    - Go(){
+        // implement
+    }
+    - Start(){
+        // implement
+    }
+    - Stop(){
+        // implement
+    }
+}
+
+class Bike implements vehicle{
+    - Go(){
+        // implement
+    }
+    - Start(){
+        // implement
+    }
+    - Stop(){
+        // implement
+    }
+}
+
+class Bus implements vehicle{
+    - Go(){
+        // implement
+    }
+    - Start(){
+        // implement
+    }
+    - Stop(){
+        // implement
+    }
+}
+
+class speedBoat implements vehicle{
+    - Go(){
+        // implement
+    }
+    - Start(){
+        // implement
+    }
+    - Stop(){
+        // implement
+    }
+}
+
+
+
+
+
+Low term module
+- bus, car, bike, speedboat
+
+
+- High Level module
+Class Human{
+
+
+    goToDhaka(vehicle v){
+        v.start();
+        v.go();
+        if(destination == dhaka){
+            v.stop();
+        }
+    }
+}
+
+
+
+main -> client
+
+Human tauhid = new Human()
+tauhid.goToDhaka(new bike())
+
+
+
+HUMAN -> car
+
+HUMAN -> vehicle <- car, bus, bike, speedboat
+
+
+if(omuk == omuk1){
+    svfv
+}
+
+else if(omuk == omuk2){
+    bjhj
+}
+
+else if(omuk == omuk3){
+    jkhvik
+}
+
+else{
+    jkhvik
+}
+
+
+
+Class Bank -> diposit(), withdraw(), transfer(), balanceCheck(), calculateInterest()
+
+- IslamiBank -> NO INTEREST
+- UttaraBank
+- SonaliBank
+- BracBank
+- CityBank
+- DBBL
+
+
+class IslamiBank{
+    - override calculateInterest(){
+        throw new Exception("Not allowed");
+    }
+}
+
+
+
+main(){
+    Bank ib = new IslamiBank()
+    ib.deposit()
+    ib.withdraw()
+    ib.transfer()
+    ib.balanceCheck()
+    ib.calculateInterest(account a) // Not allowed 
+}
+
+Array - 10000
+LinkedList - 1 - 1- 1 -1 1-1-1- 1-1-1-1-1-1
+
+
+q = 3*3*3*3 -> premitive Obsession
+ 
+q = math.pow(3, 4)  -> Not primitive Obsession
+
+
+queue q = new queue(type.min)

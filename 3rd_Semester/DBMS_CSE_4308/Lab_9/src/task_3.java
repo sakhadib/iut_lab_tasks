@@ -5,7 +5,7 @@ public class task_3 {
         String Password = "your_password";
         String URL = "jdbc:oracle:thin:@localhost:1521:xe";
 
-        String Query = "SELECT * FROM TRANSACTIONS";
+        String Query = "SELECT * FROM Student";
 
 
 
